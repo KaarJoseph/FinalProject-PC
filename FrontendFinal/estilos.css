@@ -1,0 +1,261 @@
+/* General styling */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: linear-gradient(90deg, #007bff, #6610f2);
+    color: white;
+    padding: 20px 10px;
+    text-align: center;
+    background-size: 200% 200%;
+    animation: gradientMove 5s infinite alternate;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 10px 0 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    color: #ffd700;
+    transform: scale(1.1);
+}
+
+/* Main content */
+main {
+    padding: 20px;
+}
+
+/* Secciones */
+section {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    animation: slideIn 0.6s ease-out;
+}
+
+section:hover {
+    transform: scale(1.02);
+    background-color: #f0f8ff;
+}
+
+/* Vertical layout for TikTok, YouTube, and Web sections */
+#tiktok, #youtube, #web {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+/* Styling for General section */
+#gen {
+    text-align: center;
+    margin-top: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f1f1f1;
+}
+
+/* Footer */
+footer {
+    background-color: #007bff;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 14px;
+}
+
+/* Icons */
+h2 i {
+    color: #007bff;
+    margin-right: 8px;
+    transition: transform 0.5s ease;
+}
+
+h2 i:hover {
+    transform: rotate(360deg);
+}
+
+/* Keyframes for gradient header */
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+    100% {
+        background-position: 100% 50%;
+    }
+}
+
+/* Slide-in animation for sections */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Button animations (optional, if added in the future) */
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.1);
+}
+
+/* Modo oscuro general */
+body.dark-mode {
+    background-color: #121212;
+    color: #f9f9f9;
+}
+
+header.dark-mode {
+    background: linear-gradient(90deg, #333, #444);
+    color: white;
+}
+
+nav.dark-mode ul li a {
+    color: white;
+}
+
+section.dark-mode {
+    background-color: #1e1e1e;
+    border: 1px solid #333;
+    color: white;
+}
+
+footer.dark-mode {
+    background-color: #333;
+}
+
+/* Botón para alternar modo oscuro */
+button.toggle-dark-mode {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s;
+}
+
+button.toggle-dark-mode:hover {
+    background-color: #0056b3;
+}
+
+/* Estilo para la sección del problema */
+.problema {
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.problema h2 {
+    font-size: 22px;
+    color: #007bff;
+    margin-bottom: 15px;
+}
+
+.problema-contenido {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.problema-contenido p {
+    flex: 2;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.problema-imagen {
+    flex: 1;
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+
+.extract-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.extract-button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+.extract-button:active {
+    background-color: #003f7f;
+    transform: scale(1);
+}
+
+.button-container {
+    text-align: center;
+}
